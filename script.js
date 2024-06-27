@@ -149,7 +149,13 @@ msg = `You have: \n ${wins} wins, \n ${loss} loss \n ${ties} tie!`
 console.log(msg);
 
 msg += "\n\n\n" + calculateMoveSummary();
-document.getElementById("placeholder").textContent = msg;
+onload = () => {
+    let pDocument = document.getElementById("placeholder");
+    pDocument.textContent = msg;
+}
+
+
+// pDocument.innerText = msg;
 alert(msg);
 
 
